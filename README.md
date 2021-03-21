@@ -1,2 +1,2 @@
 # mule-awssm-extension
-Mule 4 extension for AWS Secrets Manager
+Mule 4 custom properties provider for AWS Secrets Manager
