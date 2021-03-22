@@ -1,0 +1,16 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:aws-sm-properties-provider="http://www.mulesoft.org/schema/mule/aws-sm-properties-provider"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/aws-sm-properties-provider http://www.mulesoft.org/schema/mule/aws-sm-properties-provider/current/mule-aws-sm-properties-provider.xsd">
+
+    <aws-sm-properties-provider:config name="config" configId="configId" region="us-east-1" 
+    							 authType="PROFILE">
+    </aws-sm-properties-provider:config>
+
+
+    <object name="testObject" class="com.sandiindia.mule.provider.properties.awssm.SMTestObject" >
+        <property key="valueFromProperty" value="${aws-sm-getSecretValue::keystoreCred:keystorePassword}" />
+    </object>
+
+</mule>
