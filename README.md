@@ -1,14 +1,31 @@
 # Mule 4 Custom Properties Provider for AWS Secrets Manager
 
 This mule custom properties extension allows Mule applications to retrive sensitive configuration properties such as keystore passwords, database password etc directly from AWS secrets manager. The key benifit of this approach is that you don't have to put these sensitive property value in clear text in the configuration files, which is a major security issue. Some of the other benefit of this approach are:
--  You can make use of life cycle lambda functions or any other custom process to automatically rotate the secrets in an automated way
+-  You can make use of life cycle lambda functions or any other custom process to rotate the secrets in an automated way
 - No need to manage encryption keys as we have to if we use secure configuration properties
 
 The down side is ofcourse this solution requires access to AWS secrets manager
 
 ![](https://github.com/sandiindia/mule-awssm-extension/blob/v1.0.0/Arch.jpg)
 
-### Customizing the Module to Access Your Custom Properties Source
+## How it works?
+Below example illustrates the usage. 
+The **keyPassword** ```"${aws-sm-getSecretValue::keystoreCred:keyPassword}```** and keystore **pasword** ```"${aws-sm-getSecretValue::keystoreCred:keystorePassword}"``` refer to the secret manager defined prefix to fetch the secret from the Secrets manager. 
+
+```xml
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="cdd1c593-0d92-4d51-a5cc-1ac3acd60496" >
+		<http:listener-connection  protocol="HTTPS" host="0.0.0.0" port="8081" >
+			<tls:context >
+				<tls:key-store type="jks" keyPassword="${aws-sm-getSecretValue::keystoreCred:keyPassword}" password="${aws-sm-getSecretValue::keystoreCred:keystorePassword}" path="keystore.jks"/>
+			</tls:context>
+		</http:listener-connection>
+	</http:listener-config>
+```
+Use the following format to get the secret manager specific secret key value
+
+```"${aws-sm-getSecretValue::secretName:secretKey}"```
+
+## Customizing the Module to Access Your Custom Properties Source
 Follow these steps to customize the extension package name:
 1.  Import the  [Secrets Manager Properties Provider project](https://github.com/sandiindia/mule-awssm-extension)  into your favorite IDE. 
 2.  Open the  `pom.xml`  file:
