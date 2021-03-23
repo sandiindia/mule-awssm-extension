@@ -5,3 +5,5 @@ This mule custom properties extension allows Mule applications to retrive sensit
 - No need to manage encryption keys as we have to if we use secure configuration properties
 
 The down side is ofcourse this solution requires access to AWS secrets manager
+
+![](https://github.com/sandiindia/mule-awssm-extension/blob/v1.0.0/Arch.jpg)
