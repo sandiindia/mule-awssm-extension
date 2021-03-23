@@ -9,25 +9,16 @@ The down side is ofcourse this solution requires access to AWS secrets manager
 ![](https://github.com/sandiindia/mule-awssm-extension/blob/v1.0.0/Arch.jpg)
 
 ### Customizing the Module to Access Your Custom Properties Source
-Follow these steps to customize the Mule SDK Module:
+Follow these steps to customize the extension package name:
 1.  Import the  [Secrets Manager Properties Provider project](https://github.com/sandiindia/mule-awssm-extension)  into your favorite IDE. 
 2.  Open the  `pom.xml`  file:
     
     1.  Define the GAV (`groupId`,  `artifactId`, and  `version`) of your module.
         
     2.  Define the  `name`  of your module.
-        
-    
+
 3.  Change the package name (`com.sandiindia.mule.provider`) of your code.
     
-4.  Open  `resources/META-INF/mule-artifact/mule-artifact.json`:
-    
-    1.  Set the  `type`  field with value  `com.sandiindia.mule.provider.properties.awssm.internal.CustomConfigurationPropertiesProviderFactory`, replacing  `com.my.company.custom.provider.api`  to match the package name you changed previously.
-        
-    2.  Set the  `name`  field using the name you want to define for the module.
-        
-    3.  Set the  `exportedPackages`  field to match the package name you changed previously.
-
 Install the module locally using  `mvn clean install`  to make the module accessible from Studio.
 
 ## Using the Custom Properties Provider in a Mule Application
