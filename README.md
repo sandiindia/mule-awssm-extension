@@ -60,4 +60,3 @@ Now, open the application XML file and in the  **Global Elements**  tab and clic
 You can now configure your new component and start using properties with the prefix defined in your module.
 
 ![](https://github.com/sandiindia/mule-awssm-extension/blob/v1.0.0/images/config.PNG)
-
