@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net" modified="2021-03-23T20:43:15.709Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="DXNSMld4uQI07nunTUIr" version="14.5.1" type="github">
+  <diagram id="HIbe8hK-fx3pcji1Hbmb" name="Arch">
+    <mxGraphModel dx="1422" dy="706" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-2" value="Mule Runtime" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=bottom;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;shadow=0;sketch=0;glass=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="130" width="120" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-1" value="AWS Secrets &lt;br&gt;Manager" style="points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F54749;gradientDirection=north;fillColor=#C7131F;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.secrets_manager;" vertex="1" parent="1">
+          <mxGeometry x="520" y="196" width="54" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=http://siliconangle.com/files/2013/04/mulesoft-logo.jpg;" vertex="1" parent="1">
+          <mxGeometry x="193" y="133" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#fad9d5;strokeColor=#ae4132;" edge="1" parent="1" source="pvls0_9Lr0VkEHNXjT0J-16" target="pvls0_9Lr0VkEHNXjT0J-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-16" value="Secrets Manager Properties Provider" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#fad9d5;strokeColor=#ae4132;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="205" y="162" width="90" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-20" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/internet-security-flat-2/32/Internet_Security_padlock_lock_locked_password_secure-128.png;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="353" y="159" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-27" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/fatcow/32x32_0720/plugin_disabled.png;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="278" y="154" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-29" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn3.iconfinder.com/data/icons/basic-ui-82/64/42-128.png;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="235" y="232" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-30" value="Load Secret" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="353" y="199" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-33" value="On &lt;br&gt;Startup" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontSize=11;fontColor=#004C99;labelBackgroundColor=none;fontStyle=1" edge="1" parent="1" source="pvls0_9Lr0VkEHNXjT0J-23" target="pvls0_9Lr0VkEHNXjT0J-16">
+          <mxGeometry x="0.0806" y="-25" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-23" value="Mule Application" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="205" y="263" width="90" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="pvls0_9Lr0VkEHNXjT0J-24" value="" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.process;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="269.84000000000003" y="263" width="25.16" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
