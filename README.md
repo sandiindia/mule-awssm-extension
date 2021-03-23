@@ -25,7 +25,7 @@ Use the following format to get the secret manager specific secret key value
 
 ```"${aws-sm-getSecretValue::secretName:secretKey}"```
 
-## Customizing the Module to Access Your Custom Properties Source
+## Customizing the Module
 Follow these steps to customize the extension package name:
 1.  Import the  [Secrets Manager Properties Provider project](https://github.com/sandiindia/mule-awssm-extension)  into your favorite IDE. 
 2.  Open the  `pom.xml`  file:
